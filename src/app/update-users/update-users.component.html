@@ -1,0 +1,20 @@
+<div class="col-md-6 offset-md-3">
+    <h3 style="text-align: center;"> <b>Update User</b> </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> User ID </label>
+            <input type="text" class ="form-control" id = "userId"
+                [(ngModel)] = "users.userId" name = "userId">
+        </div><br/>
+    
+        <div class="form-group">
+            <label> Password </label>
+            <input type="password" class ="form-control" id = "password"
+                [(ngModel)] = "users.password" name = "password">
+        </div> <br/>
+    
+        <button class = "btn btn-success" type ="submit">Update</button>
+        
+    </form>
+    </div> 

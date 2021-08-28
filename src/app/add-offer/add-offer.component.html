@@ -1,0 +1,59 @@
+<body>
+<div class ="col-md-6 offset-md-3">
+    <h2 style="text-align: center;"> Add Offer</h2>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class = "form-group">
+            <label> Title </label>
+            <input type="text" class = "form-control" id = "title" placeholder="Enter Offer Title"
+                [(ngModel)] = "offer.title" name = "title">
+        </div> <br>
+    
+        <div class = "form-group">
+            <label> Description </label>
+            <input type="text" class = "form-control" id = "description" placeholder="Enter Offer Description"
+                [(ngModel)] = "offer.description" name = "description">
+        </div> <br>
+    
+        <div class = "form-group">
+            <label> Category </label>
+            <input type="text" class = "form-control" id = "category" placeholder="Enter Offer Category"
+                [(ngModel)] = "offer.category" name = "category">
+        </div> <br>
+    
+        <div class = "form-group">
+            <label> Type </label>
+            <input type="text" class = "form-control" id = "type" placeholder="Enter Offer Type"
+                [(ngModel)] = "offer.type" name = "type">
+        </div> <br>
+    
+        <div class = "form-group">
+            <label> Price </label>
+            <input type= "number" class = "form-control" id = "price" placeholder="Enter Price"
+                [(ngModel)] = "offer.price" name = "price">
+        </div> <br>
+
+        <div class="form-group">
+            <label for="empId">Employee Id</label>
+            <input type="empId" class="form-control" id="empId" placeholder="Enter Employee Id" 
+            name="empId"[(ngModel)]="offer.empId" required #name="ngModel"
+            [class.is-invalid]="name.invalid && name.touched">
+            <small class="text-danger"[class.d-none]="name.valid||name.untouched">Employee Id is Required</small>
+          </div><br/>
+    
+        <div class = "form-group">
+            <label> Is Available </label>
+            <input type= "text" class = "form-control" id = "isAvailable" placeholder="Enter Offer Availablility"
+                [(ngModel)] = "offer.isAvailable" name = "isAvailable">
+        </div> <br>
+    
+        <div class = "form-group">
+            <label> Available Upto </label>
+            <input type= "date" class = "form-control" id = "availableUpto" placeholder="Enter offer Available Upto"
+                [(ngModel)] = "offer.availableUpto" name = "availableUpto">
+        </div> <br>
+    
+        <button class = "btn btn-success" type="submit"> Add </button>
+    </form>
+    </div>
+</body>

@@ -1,0 +1,61 @@
+<div class = "bg">
+<!-- <nav class="navbar navbar-expand-sm bg-primary navbar-dark"> -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="background-color: #8a91f7;">
+
+    <ul class = "navbar-nav">
+        <li class="nav-item">
+            <a routerLink ="login" routerLinkActive="active" class ="nav-link" >Login </a>
+        </li>
+        <li class = "nav-item">
+            <a routerLink="resources" routerLinkActive="active" class="nav-link" >Home</a>
+        </li>
+        <li class = "nav-item">
+            <a routerLink="users" routerLinkActive="active" class="nav-link" >Users List</a>
+        </li>
+        <li class = "nav-item">
+            <a routerLink="add-users" routerLinkActive="active" class="nav-link" >Add Users</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink ="getallemployee" routerLinkActive="active" class ="nav-link">Employee List</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink ="addemployee" routerLinkActive="active" class ="nav-link">Add Employee </a>
+        </li>
+        <li class = "nav-item">
+            <a routerLink="offers" routerLinkActive="active" class = "nav-link">Offer List</a>
+        </li>
+        <li class = "nav-item">
+            <a routerLink="add-offer" routerLinkActive="active" class = "nav-link">Add Offer</a>
+        </li>
+        <li class = "nav-item">
+            <a routerLink="requirements" routerLinkActive="active" class = "nav-link">Requirement List<i class="fa fa-list" aria-hidden="true"></i></a>
+        </li>
+        <li class = "nav-item">
+            <a routerLink="add-requirement" routerLinkActive="active" class = "nav-link">Add Requirement</a>
+        </li>
+        <li class = "nav-item" style="text-decoration-color: red;">
+            <a routerLink="proposals" routerLinkActive="active" class="nav-link" style="text-align: left;" >Proposal List</a>
+        </li>
+        <li class = "nav-item">
+            <a routerLink="create-proposal" routerLinkActive="active" class="nav-link" >Add Proposals</a>
+        </li> 
+        <li class="nav-item">
+            <a routerLink ="logout" routerLinkActive="active" class ="nav-link">Logout </a>
+        </li>
+        
+    </ul>
+</nav>
+
+
+<h1 class="text-center" style="color: blueviolet; font-family: 'Times New Roman', Times, serif; font-size: 50px;" ><b> In House Market Place </b> </h1>
+
+<div class="container">
+   <router-outlet></router-outlet>
+</div>
+
+<footer class = "footer">
+    <div class = "container">
+        <span>All Rights Reserved 2021 @In House Market Place</span>
+    </div>
+</footer>
+</div>

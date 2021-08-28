@@ -1,0 +1,59 @@
+
+<body>
+<div class="col-md-6 offset-md-3">
+    <h2 style="text-align: center;"><b>Add Proposals</b></h2>
+    <form (ngSubmit)="onSubmit()">
+
+
+        <div class="form-group">
+            <label>Proposal </label>
+            <input type="text" class="form-control" id="proposal" placeholder="Enter your proposal"
+             [(ngModel)]="proposals.proposal" name="Proposal">
+        </div><br/>
+
+        <div class="form-group">
+            <label>Amount</label>
+            <input type="any" class="form-control" id="amount" placeholder="Enter the amount" 
+            [(ngModel)]="proposals.amount" name="Amount">
+        </div><br/>
+
+        <div class="form-group">
+            <label>Proposal Date</label>
+            <input type="date" class="form-control" id="proposalDate"
+             [(ngModel)]="proposals.proposalDate" name="proposalDate">
+        </div><br/>
+
+        <div class="form-group">
+            <label>Proposal Accepted On</label>
+            <input type="date" class="form-control" id="acceptedOn"
+             [(ngModel)]="proposals.acceptedOn" name="acceptedOn">
+        </div><br/>
+
+<div class="form-group">
+            <label>Proposal Accepted</label>
+            <input type="text" class="form-control" id="isAccepted" placeholder="Acceptance status"
+             [(ngModel)]="proposals.isAccepted" name="isAccepted">
+        </div>
+<br/>
+
+        <div class="form-group">
+            <label for="resId">Resource Id</label>
+            <input type="resId" class="form-control" id="resId" placeholder="Enter your Resource Id"
+            name="resId"[(ngModel)]="proposals.resId" required #name="ngModel"
+            [class.is-invalid]="name.invalid && name.touched">
+            <small class="text-danger"[class.d-none]="name.valid||name.untouched">Resource Id is Required</small>
+          </div><br/>
+
+        <div class="form-group">
+            <label for="empId">Employee Id</label>
+            <input type="empId" class="form-control" id="empId" placeholder="Enter Employee Id" 
+            name="empId"[(ngModel)]="proposals.empId" required #name="ngModel"
+            [class.is-invalid]="name.invalid && name.touched">
+            <small class="text-danger"[class.d-none]="name.valid||name.untouched">Employee Id is Required</small>
+          </div><br/>
+
+        <br/>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+    </div>
+  </body>

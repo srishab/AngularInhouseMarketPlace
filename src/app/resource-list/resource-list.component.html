@@ -1,0 +1,25 @@
+
+    <h2 style="text-align: center;"><b>Resource List</b></h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Resource Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Type</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let res of resources">
+            <td>{{res.resId}}</td>
+            <td>{{res.title}}</td>
+            <td>{{res.description}}</td>
+            <td>{{res.category}}</td>
+            <td>{{res.type}}</td>
+            <td>{{res.price}}</td>
+        </tr>
+    </tbody>
+</table>
+

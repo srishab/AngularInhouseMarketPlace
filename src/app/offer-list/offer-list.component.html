@@ -1,0 +1,42 @@
+
+    <h2 style="text-align: center;"><b>Offer List</b></h2>
+<nav class="navbar">
+    <table >
+        <tr>
+            <td>
+                <input class="form-control" type="text" name="category" [(ngModel)]="category" (ngModelChange)="Search()"
+                placeholder="Enter category to search.."></td>
+
+            <td>
+                <input class="form-control" type="text" name="type" [(ngModel)]="type" (ngModelChange)="Search1()"
+                placeholder="Enter type to search.."></td>
+        </tr>
+    </table>
+</nav>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Resource Id</th>
+            <th> Title</th>
+            <th> Category</th>
+            <th> Type</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let offer of offers | orderBy: 'resId' | paginate: {itemsPerPage:5,currentPage:p};">
+            <td>{{ offer.resId}}</td>  
+            <td>{{ offer.title}}</td>
+            <td>{{ offer.category}}</td>
+            <td>{{ offer.type}}</td>
+            <td>
+                <button (click) = "updateOffer()" class = "btn btn-info"> Update</button>
+                <button (click)= "deleteOffer(offer.resId)" class="btn btn-danger" style="margin-left:20px;">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+</table>
+

@@ -1,0 +1,23 @@
+<div class = "col-md-6 offset-md-3">
+<h2 style="text-align: center;"><b>Users-list</b></h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> User Id</th>
+            <th> Password </th>
+            <th> Actions </th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let users of users" >
+            <td> {{ users.userId }} </td>
+            <td> {{ users.password }} </td>
+            <td>
+               <button (click) ="updateUsers(users.userId)" class = "btn btn-info"> Update </button>  
+               <button (click) = "deleteUser(users.userId)" class = "btn btn-danger" style="margin-left: 80px"> Delete</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+</div>

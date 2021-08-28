@@ -1,0 +1,32 @@
+
+    <h2 style="text-align: center;"><b>Proposal List</b></h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Proposal Id</th>
+            <th>Proposal</th>
+            <th>Amount</th>
+            <th>Proposal Date</th>
+            <th>Accepted(T/F)</th>
+            <th>Accepted On</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+   
+    <tbody>
+        <tr *ngFor= "let prop of proposals | paginate: {itemsPerPage:5,currentPage:p};">
+            <td>{{prop.propId}}</td>
+            <td>{{prop.proposal}}</td>
+            <td>{{prop.amount}}</td>
+            <td>{{prop.proposalDate}}</td>
+            <td>{{prop.isAccepted}}</td>
+            <td>{{prop.acceptedOn}}</td>
+            <td>
+                <button (click)="deleteProposal(prop.propId)" class="btn btn-danger">Delete</button>
+        </td>
+        </tr>
+    </tbody>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</table>
+
+

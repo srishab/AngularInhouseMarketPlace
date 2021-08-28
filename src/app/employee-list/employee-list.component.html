@@ -1,0 +1,25 @@
+<h2 style="text-align: center;">Employee List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Department Id</th>
+            <th>Location</th>
+            <th>UserId</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.empId}}</td>
+            <td>{{emp.empName}}</td>
+            <td>{{emp.deptName}}</td>
+            <td>{{emp.location}}</td>
+            <td>{{emp.user.userId}}</td>
+            <td>
+                <button (click)="updateEmployee()" class="btn btn-info">Update</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

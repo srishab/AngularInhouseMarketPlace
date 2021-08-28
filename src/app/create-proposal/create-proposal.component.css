@@ -1,0 +1,13 @@
+form label{
+    font-weight:bold;
+  }
+
+  body{
+    background-image: url('https://cdn.nohat.cc/thumb/f/720/9c44586e92284ae7903d.jpg');
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* https://www.techrepublic.com/a/hub/i/r/2021/03/22/215f6842-c552-4616-99ee-b521c707c807/resize/1200x900/75f196e832af34ecfe03e47571fc70b0/zoom-going-green-background.jpg */

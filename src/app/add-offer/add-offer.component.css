@@ -1,0 +1,14 @@
+form label, h2{
+    font-weight:bold;
+    color:bisque;
+  }
+
+  body{
+    background-image: url('https://www.hortongroup.com/hs-fs/hubfs/Services%20Rework/backgrounds/websites%20and%20custom/ecommerce%20background.png?width=700&name=ecommerce%20background.png');
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ 
